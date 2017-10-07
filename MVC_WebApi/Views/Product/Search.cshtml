@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>Search</h2>
+<body>
+@using (Html.BeginForm("Search", "Product"))
+{
+<span> ID</span>    <input type="text" name="id"  />    <input type="submit" value="Search " />
+    <br/>
+    if (ViewBag.result != null)
+    {
+        <span>ID : @ViewBag.result.ID</span>
+        <span>Name : @ViewBag.result.Name</span>
+        <span>Price : @ViewBag.result.Price</span>
+    }
+
+}
+</body>
+
+
+
+
